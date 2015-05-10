@@ -47,11 +47,9 @@ syntax on
 
 " Color scheme
 "color wombat256mod
-set background=dark
+set background=light
 set t_Co=256
-let g:solarized_termcolors=256
-let g:solarized_contast="low"
-color solarized
+color wombat256mod
 
 " Lines
 set number
@@ -76,7 +74,7 @@ set smartcase
 " Disable stupid backup
 set nobackup
 set nowritebackup
-set noswapfile
+"set noswapfile
 
 
 
