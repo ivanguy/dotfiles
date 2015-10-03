@@ -1,8 +1,16 @@
+set nocompatible
 autocmd! bufwritepost .vimrc source %
 set t_Co=256
 color wombat256mod
-
 filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'Chiel92/vim-autoformat'
+Plugin 'mattn/emmet-vim'
+
 filetype plugin indent on
 
 syntax on
@@ -16,4 +24,5 @@ set autoindent
 
 set foldmethod=syntax
 
-set list
+set nolist
+set nowrap
