@@ -1,0 +1,5 @@
+[user]
+	email = agrocooker@gmail.com
+	name = Ivan Nemenchinsky
+[credential]
+	helper = cache --timeout=300
