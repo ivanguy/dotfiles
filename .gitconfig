@@ -3,3 +3,5 @@
 	name = Ivan Nemenchinsky
 [credential]
 	helper = cache --timeout=300
+[core]
+	excludesfile = /home/ivan/dotfiles/.gitignore_global

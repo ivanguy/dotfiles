@@ -2,14 +2,14 @@ set nocompatible
 autocmd! bufwritepost .vimrc source %
 set t_Co=256
 color wombat256mod
-filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'Chiel92/vim-autoformat'
-Plugin 'mattn/emmet-vim'
+call plug#begin('~/.vim/plugged')
+Plug 'Raimondi/delimitMate'
+Plug 'Valloric/YouCompleteMe'
+Plug 'Chiel92/vim-autoformat'
+Plug 'mattn/emmet-vim'
+Plug 'ctrlpvim/ctrlp.vim'
+call plug#end()
 
 filetype plugin indent on
 
@@ -21,8 +21,6 @@ set shiftwidth=4
 set shiftround
 set expandtab
 set autoindent
-
-set foldmethod=syntax
-
+set foldmethod=indent
 set nolist
 set nowrap
