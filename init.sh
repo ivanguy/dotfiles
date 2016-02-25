@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 dir=$HOME/dotfiles
@@ -15,6 +14,6 @@ do
     # Move existing dotfile to $backup
     mv $HOME/.$filename $backup/
     # Create symlink
-    ln -s $dir/$filename $HOME/.$filename
+    ln -sv $dir/$filename $HOME/.$filename
   fi
 done
