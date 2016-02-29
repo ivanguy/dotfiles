@@ -60,3 +60,5 @@ syntax on
 
 " set correct fyletype for .twig
 au BufNewFile,BufRead *.twig set filetype=html
+
+map <leader>e <C-y>,  " emmet expand abbr
