@@ -3,8 +3,13 @@
 dir=$HOME/dotfiles
 backup=$HOME/dotfiles.bak
 
-#mkdir -p $backup
+mkdir -p $backup
 
+mv $HOME/.gitconfig $backup/.gitconfig   
+mv $HOME/.gitignore_global $backup/.gitignore_global 
+mv $HOME/.vim $backup/.vim 
+mv $HOME/.bashrc $backup/.bashrc 
+mv $HOME/.zshrc $backup/.zshrc 
 #for file in $dir/*
 #do
   #filename=$(basename $file)
