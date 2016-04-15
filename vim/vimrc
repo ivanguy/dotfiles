@@ -44,6 +44,15 @@ let g:lightline = {
 "  \ 'separator': { 'left': '|', 'right': '|' },
 "  \ 'subseparator': { 'left': '|', 'right': '|' }
 
+" ctrlP
+let g:ctrlp_prompt_mappings = {
+    \ 'AcceptSelection("e")': ['<c-t>'],
+    \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
+    \ }
+
+"Autoformat
+let g:autoformat_autoindent = 0
+
 set number
 set tabstop=2
 set softtabstop=2

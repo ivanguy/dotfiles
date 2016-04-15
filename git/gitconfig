@@ -5,3 +5,5 @@
 	helper = cache --timeout=300
 [core]
 	excludesfile = /home/ivan/.gitignore_global
+[push]
+	default = simple
