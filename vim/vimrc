@@ -17,8 +17,8 @@ Plug 'Raimondi/delimitMate'
 "Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdcommenter'  " help nerdcommenter
 "Plug 'nathanaelkane/vim-indent-guides'  " help indent-guides
-"Plug 'itchyny/lightline.vim'
-"Plug 'tpope/vim-fugitive'  " git wrapper, needed for lightline branch
+Plug 'itchyny/lightline.vim'
+Plug 'tpope/vim-fugitive'  " git wrapper, needed for lightline branch
 "Plug 'airblade/vim-gitgutter'
 "Plug 'easymotion/vim-easymotion'
 call plug#end()
@@ -28,24 +28,26 @@ call plug#end()
 set laststatus=2  " fix for lightline only show on :vsp
 set noshowmode  " disable vim's default statusline
 let g:lightline = {
-  \ 'colorscheme': 'wombat',
-  \ 'active': {
-  \   'left': [ [ 'mode', 'paste' ],
-  \             [ 'fugitive', 'readonly', 'filename', 'modified' ] ]
-  \ },
-  \ 'component': {
-  \   'readonly': '%{&filetype=="help"?"":&readonly?"RO":""}',
-  \   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}',
-  \   'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}'
-  \ },
-  \ 'component_visible_condition': {
-  \   'readonly': '(&filetype!="help"&& &readonly)',
-  \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))',
-  \   'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
-  \ },
-  \
-  \
-  \ }
+\ 'colorscheme': 'wombat',
+\ 'active': {
+\   'left': [ [ 'mode', 'paste' ],
+\             [ 'fugitive', 'readonly', 'filename', 'modified' ] ]
+\ },
+\ 'component': {
+\   'absolutepath': '%F',
+\   'path': '%f',
+\   'readonly': '%{&filetype=="help"?"":&readonly?"RO":""}',
+\   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}',
+\   'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}'
+\ },
+\ 'component_visible_condition': {
+\   'readonly': '(&filetype!="help"&& &readonly)',
+\   'modified': '(&filetype!="help"&&(&modified||!&modifiable))',
+\   'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
+\ },
+\
+\
+\ }
 "  \ 'separator': { 'left': '|', 'right': '|' },
 "  \ 'subseparator': { 'left': '|', 'right': '|' }
 
@@ -59,15 +61,16 @@ let g:ctrlp_prompt_mappings = {
 let g:autoformat_autoindent = 0
 
 "set number
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
 set shiftround
 set expandtab
 set autoindent
 set foldmethod=indent
 set nolist
 set nowrap
+set hls
 
 filetype plugin indent on
 syntax on
@@ -101,3 +104,5 @@ function! ToggleHiddenAll()
 endfunction
 
 nnoremap <S-h> :call ToggleHiddenAll()<CR>
+imap kj <ESC>
+
