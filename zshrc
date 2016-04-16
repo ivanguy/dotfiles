@@ -51,7 +51,6 @@ ZSH_THEME="dieter"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(command-not-found autojump)
-#ZSH_TMUX_AUTOSTART=true
 
 # User configuration
 
@@ -84,7 +83,11 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 bindkey -v
-alias v vim
+alias v='vim'
+alias vimrc='vim ~/.vim/vimrc'
+alias zshrc='vim ~/.zshrc'
+alias tmux='tmux -2'
+alias tmux.conf='vim ~/.tmux.conf'
 # wirtualenvwrapper
 export WORKON_HOME=$HOME/virtualenvs
 export PROJECT_HOME=$HOME/dev
