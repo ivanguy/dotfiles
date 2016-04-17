@@ -10,6 +10,7 @@ mv $HOME/.gitignore_global $backup/.gitignore_global
 mv $HOME/.vim $backup/.vim
 mv $HOME/.bashrc $backup/.bashrc
 mv $HOME/.zshrc $backup/.zshrc
+mv $HOME/.tmux.conf $backup/.tmux.conf
 #for file in $dir/*
 #do
   #filename=$(basename $file)
@@ -27,3 +28,4 @@ ln -sv $dir/git/gitignore_global $HOME/.gitignore_global
 ln -sv $dir/vim $HOME/.vim
 ln -sv $dir/bashrc $HOME/.bashrc
 ln -sv $dir/zshrc $HOME/.zshrc
+ln -sv $dir/tmux.conf $HOME/.tmux.conf
