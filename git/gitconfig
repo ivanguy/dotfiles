@@ -1,9 +1,9 @@
 [user]
-	email = agrocooker@gmail.com
+	email = nemenivan@gmail.com
 	name = Ivan Nemenchinskii
 [credential]
 	helper = cache --timeout=300
 [core]
-	excludesfile = /home/ivan/.gitignore_global
+	excludesfile = /home/tony/.gitignore_global
 [push]
 	default = simple
