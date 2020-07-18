@@ -120,7 +120,7 @@ fi
 # wirtualenvwrapper
 export WORKON_HOME=$HOME/virtualenvs
 export PROJECT_HOME=$HOME/dev
-source /usr/local/bin/virtualenvwrapper.sh
+source $HOME/.local/bin/virtualenvwrapper.sh
 
 PATH="/home/ivan/perl5/bin${PATH+:}${PATH}"; export PATH;
 PERL5LIB="/home/ivan/perl5/lib/perl5${PERL5LIB+:}${PERL5LIB}"; export PERL5LIB;
