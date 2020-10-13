@@ -11,12 +11,13 @@ color wombat256mod
 
 call plug#begin('~/.vim/plugged')
 Plug 'Raimondi/delimitMate'
+Plug 'mboughaba/i3config.vim'
 "Plug 'Valloric/YouCompleteMe', { 'on': [] }
 "Plug 'Chiel92/vim-autoformat'  " help autoformat
 "Plug 'mattn/emmet-vim'
 "Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdcommenter'  " help nerdcommenter
-"Plug 'nathanaelkane/vim-indent-guides'  " help indent-guides
+Plug 'nathanaelkane/vim-indent-guides'  " help indent-guides
 Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-fugitive'  " git wrapper, needed for lightline branch
 "Plug 'airblade/vim-gitgutter'
@@ -59,6 +60,12 @@ let g:ctrlp_prompt_mappings = {
 
 "Autoformat
 let g:autoformat_autoindent = 0
+
+"i3config filetype
+aug i3config_ft_detection
+    au!
+    au BufNewFile,BufRead ~/.config/i3/config set filetype=i3config
+aug end
 
 "set number
 set tabstop=4
